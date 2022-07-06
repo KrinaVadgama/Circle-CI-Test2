@@ -1,0 +1,48 @@
+version: 2.1
+
+jobs:
+  # Job one with a unique name
+  Hello_1:
+    docker:
+     - image: cimg/base:2022.05
+    steps:
+      - run: echo "Say hello to YAML!"
+      
+  Hello_2:
+    docker:
+     - image: cimg/base:2022.05
+    steps:
+      - run: echo "Say hello to YAML!"
+      
+  Hello_3:
+    docker:
+     - image: cimg/base:2022.05
+    steps:
+      - run: echo "Say hello to YAML!"
+  
+  Hello_4:
+    docker:
+     - image: cimg/base:2022.05
+    steps:
+      - run: echo "Say hello to YAML!"
+
+workflows:
+  # Name of workflow
+  workflow_1:
+    # List of jobs that will run
+    jobs:
+      - Hello_1
+      
+  workflow_2:
+    jobs:
+      - Hello_2
+      
+  workflow_3:
+    jobs:
+      - Hello_3
+      
+  workflow_4:
+    jobs:
+      - Hello_4
+      
+      
